@@ -17,25 +17,25 @@
 // })
 
 
-function getCheese(){
-return new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-            const cheese="CHEESE";
-            resolve(cheese);
-            // reject('bad cheese');
-        },2000);
-    })
-}
+// function getCheese(){
+// return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             const cheese="CHEESE";
+//             resolve(cheese);
+//             // reject('bad cheese');
+//         },2000);
+//     })
+// }
 
-function makeDough(cheese){
-    return new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-            const dough=cheese+" DOUGH";
-            reject('bad cheese');
-            // resolve(dough);
-        },2000);
-    })
-}
+// function makeDough(cheese){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             const dough=cheese+" DOUGH";
+//             reject('bad cheese');
+//             // resolve(dough);
+//         },2000);
+//     })
+// }
 
 function bakePizza(dough){
     return new Promise((resolve,reject)=>{
@@ -76,18 +76,18 @@ function bakePizza(dough){
 // }
 
 // to handle error in above function
-async function orderPizza(){
-    try{
-        const cheese= await getCheese();
-        console.log("here is the cheese",cheese);
-        const dough= await makeDough(cheese);
-        console.log("here is the dough", dough);
-        const pizza =await bakePizza(dough);
-        console.log("here is the pizza", pizza);
-    }catch(err){
-        console.log('error occured');
-    }
+// async function orderPizza(){
+//     try{
+//         const cheese= await getCheese();
+//         console.log("here is the cheese",cheese);
+//         const dough= await makeDough(cheese);
+//         console.log("here is the dough", dough);
+//         const pizza =await bakePizza(dough);
+//         console.log("here is the pizza", pizza);
+//     }catch(err){
+//         console.log('error occured');
+//     }
 
-}
+// }
 
-orderPizza();
+// orderPizza();

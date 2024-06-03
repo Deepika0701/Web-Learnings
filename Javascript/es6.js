@@ -93,7 +93,7 @@
 // shop.purchase();
 
 
-const myBtn=document.querySelector('#myBtn')
+// const myBtn=document.querySelector('#myBtn')
 
 // const shop={
 //     price:100,
@@ -128,5 +128,184 @@ const myBtn=document.querySelector('#myBtn')
 
 // shop.buy();
 
+//template literals aka backticks
+// const firstName='john'
+// const lastName='doe'
+
+// console.log(firstName+" "+lastName)
+
+//in template literals it writes the thing in the mnner as we write it in backticks
+
+// const message=`hello ${firstName}
+// world`
+// console.log(message)
+
+// --------------------------------------
+// Enhanced object literals
+// const product={
+//     name:'mobile',
+//     price:100
+// }
+// console.log(product)
+
+// if we want our key to be dynamic 
+//computed property keys
+// const keyName='name';
+// const product={
+//     [keyName]:'mobile',
+//     price:100
+// }
+// console.log(product)
+
+//method defintion shorthand
+// const product={
+//     buy:function(){
+//         console.log('bought')
+//     }
+// }
+
+//in shorthand you can remove the function keyword and colon also
+// const product={
+//     buy(){
+//         console.log('bought')
+//     }
+// }
+// product.buy()
+
+
+//property shorthand
+// const accessToken="asdfgbhvjb"
+// const refreshToken='sdfghmjm'
+
+// const user={
+//     accessToken:accessToken,
+//     refreshToken:refreshToken
+// }
+
+// console.log(user)
+
+//if key and value names are same
+
+// so the enhancement is
+// const user={
+//     accessToken,
+//     refreshToken
+// }
+// console.log(user);
+
+
+//Destructuring 
+// const user={
+//     name:'john',
+//     age:27,
+// }
+
+// console.log(user.name);
+// console.log(user.age);
+// to get the user properties we need to always mention the user object 
+// in destructuring 
+// const {name,age}=user;
+// console.log(name);
+// console.log(age);
+
+// const {name:fullName,age}=user;//alias
+
+//we can use the name using fullName by passing alias
+// console.log(fullName);
+
+
+// const data=['Rakesh',30,'Engineer'];
+// console.log(data[0])
+
+// const[name,age,profession]=data; //array destructuring
+// console.log(name)
+
+// example of array destructuring 
+// const [count,setCount]=useState()
+
+//Default parmaeters
+
+// const userRegister=(name,password,image)=>{
+    //earlier we used to do like this to set default parameters
+//     const img=image||'test.png'
+// console.log(name,password,img);
+// }
+
+// userRegister('Rakesh','secret','test.png');
+// userRegister('Rakesh','secret',); 
+
+
+//in es6
+// const userRegister=(name,password,image='test.png')=>{
+// console.log(name,password,image);
+// }
+
+// userRegister('Rakesh','secret',);
+
+
+//spread operator helps in cloning
+// const languages=['c','cpp','js'];
+
+// const newLanguages=[...languages]
+// const newLanguages=['tsx',...languages]
+// const newLanguages=[...languages,'tsx']
+// console.log(newLanguages);
+
+//we can even clone the object
+// const settings={
+//     volume:10,
+//     brightness:80,
+// };
+// const newSettings=settings //here it is copying by the reference
+
+// console.log(newSettings)//it referencing to the same object settings
+// console.log(settings===newSettings)
+// newSettings.volume=20;
+// console.log(settings.volume)
+
+//cloning the settings object using spread operator
+// const newSettings={...settings,contrast:50};
+// const newSettings={...settings,volume:50};//we can even override
+// console.log(newSettings);
+
+//Rest operator(...)
+
+// const addItems=(a,b,c)=>{
+//     console.log(a+b+c);
+// }
+
+const addItems=(...items)=>{
+   
+}
+addItems(3,2,4);
+
+//for of loop
+//array,string,object,set,map
+const numbers=[2,4,5,7];
+for(const num of numbers)
+    {
+        console.log(num);
+    }
+ 
+    const language='javascript';
+    for(const char of language){
+        console.log(char);
+    }
+
+    const person={
+        name:'rakesh',
+        city:'moscow',
+        brand:'apple',
+    };
+
+    //generally object is not iterable 
+    // for(const entry of person){
+    //     console.log(entry)
+    // }
+// so we are making it iterable
+
+for (const entry of Object.entries(person)){
+    console.log(entry)
+}
 
 
